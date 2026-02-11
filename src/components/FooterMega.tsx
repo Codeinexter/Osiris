@@ -13,10 +13,10 @@ export default function FooterMega() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           <div className="lg:col-span-1">
             <h3 className="font-display text-2xl font-bold mb-4">Osiris</h3>
-            <Link href="/auth" className="inline-flex items-center gap-2 bg-brand rounded-xl px-5 py-3 text-sm font-medium hover:bg-brand-light transition-colors">
+            <Link href="/auth" className="inline-flex items-center gap-2 bg-brand rounded-xl px-5 py-3 text-sm font-medium hover:bg-brand-light transition-all shadow-md hover:shadow-lg">
               See how it works <span className="text-lg">↗</span>
             </Link>
-            <p className="text-gray-400 text-xs mt-6">© Osiris Inc. 2026. All rights reserved.</p>
+            <p className="text-gray-500 text-xs mt-6">© Osiris Inc. 2026. All rights reserved.</p>
           </div>
           <div>
             <h4 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Platform</h4>
@@ -58,9 +58,9 @@ export default function FooterMega() {
             {subscribed ? (
               <p className="text-sm text-green-400">Thanks for subscribing!</p>
             ) : (
-              <div className="flex">
-                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Work email*" className="flex-1 bg-transparent border border-gray-600 rounded-l-lg px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-accent" />
-                <button onClick={() => { if (email) setSubscribed(true); }} className="bg-accent text-black font-bold text-sm px-5 py-2.5 rounded-r-lg hover:bg-accent-dark transition-colors">
+              <div className="flex rounded-lg overflow-hidden border border-gray-600">
+                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Work email*" className="flex-1 bg-transparent px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none" />
+                <button onClick={() => { if (email) setSubscribed(true); }} className="bg-accent text-gray-900 font-bold text-sm px-5 py-2.5 hover:bg-accent-dark transition-all">
                   Submit
                 </button>
               </div>

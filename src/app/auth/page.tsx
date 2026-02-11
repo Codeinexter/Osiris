@@ -17,13 +17,13 @@ function AuthContent() {
             <h1 className="font-display text-3xl sm:text-4xl font-bold mb-2">Welcome back</h1>
             <p className="text-gray-500 mb-8">Log in to continue managing your campaigns and collaborations.</p>
             <div className="space-y-4 max-w-md">
-              <Link href="/auth/login?role=creator" className="flex items-center justify-between bg-surface hover:bg-gray-100 transition-colors rounded-2xl p-6">
-                <div><h3 className="font-bold text-lg">Creator</h3><p className="text-sm text-gray-500">Access your deals &amp; insights</p></div>
-                <ArrowRight className="w-5 h-5 text-gray-400" />
+              <Link href="/auth/login?role=creator" className="flex items-center justify-between bg-surface hover:shadow-card-hover transition-all rounded-3xl p-6 border border-gray-200 hover:border-brand/30">
+                <div><h3 className="font-bold text-lg">Creator</h3><p className="text-sm text-gray-600">Access your deals &amp; insights</p></div>
+                <ArrowRight className="w-5 h-5 text-brand" />
               </Link>
-              <Link href="/auth/login?role=brand" className="flex items-center justify-between bg-surface hover:bg-gray-100 transition-colors rounded-2xl p-6">
-                <div><h3 className="font-bold text-lg">Brand</h3><p className="text-sm text-gray-500">Manage campaigns &amp; creators</p></div>
-                <ArrowRight className="w-5 h-5 text-gray-400" />
+              <Link href="/auth/login?role=brand" className="flex items-center justify-between bg-surface hover:shadow-card-hover transition-all rounded-3xl p-6 border border-gray-200 hover:border-brand/30">
+                <div><h3 className="font-bold text-lg">Brand</h3><p className="text-sm text-gray-600">Manage campaigns &amp; creators</p></div>
+                <ArrowRight className="w-5 h-5 text-brand" />
               </Link>
             </div>
             <p className="text-sm text-gray-500 mt-8">Don&apos;t have an account? <Link href="/auth?tab=signup" className="underline font-medium text-black">Sign up</Link></p>
@@ -36,19 +36,19 @@ function AuthContent() {
               <span className="text-xs font-bold text-red-600 uppercase tracking-wide">&ldquo;Best customer support&rdquo;</span>
             </div>
             <div className="grid grid-cols-2 gap-4 max-w-lg">
-              <Link href="/auth/signup?role=brand" className="bg-surface hover:bg-gray-100 transition-colors rounded-2xl p-6 col-span-1 row-span-2 flex flex-col justify-end">
+              <Link href="/auth/signup?role=brand" className="bg-surface hover:shadow-card-hover transition-all rounded-3xl p-6 col-span-1 row-span-2 flex flex-col justify-end border border-gray-200 hover:border-brand/30">
                 <h3 className="font-bold text-lg">Brand or Agency</h3>
-                <p className="text-sm text-gray-500">Match with creators</p>
-                <ArrowRight className="w-5 h-5 text-gray-400 mt-2" />
+                <p className="text-sm text-gray-600">Match with creators</p>
+                <ArrowRight className="w-5 h-5 text-brand mt-2" />
               </Link>
-              <Link href="/auth/signup?role=creator" className="bg-surface hover:bg-gray-100 transition-colors rounded-2xl p-6 flex flex-col justify-between">
+              <Link href="/auth/signup?role=creator" className="bg-surface hover:shadow-card-hover transition-all rounded-3xl p-6 flex flex-col justify-between border border-gray-200 hover:border-brand/30">
                 <div>
                   <h3 className="font-bold text-lg">Creator</h3>
-                  <p className="text-sm text-gray-500">Match with brands</p>
+                  <p className="text-sm text-gray-600">Match with brands</p>
                 </div>
-                <ArrowRight className="w-5 h-5 text-gray-400 mt-2" />
+                <ArrowRight className="w-5 h-5 text-brand mt-2" />
               </Link>
-              <div className="bg-surface/50 rounded-2xl p-6 flex flex-col justify-between opacity-60">
+              <div className="bg-gray-50 rounded-3xl p-6 flex flex-col justify-between opacity-60 border border-gray-200">
                 <div>
                   <h3 className="font-bold text-lg">Talent Agency</h3>
                   <p className="text-sm text-gray-500">Coming soon</p>
@@ -60,9 +60,9 @@ function AuthContent() {
           </>
         )}
       </div>
-      <div className="hidden lg:block bg-gradient-to-br from-brand/20 to-accent/20 relative">
+      <div className="hidden lg:block bg-gradient-to-br from-brand via-neon-purple to-accent relative overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-80 h-96 bg-pink-200 rounded-[3rem] transform rotate-3"></div>
+          <div className="w-80 h-96 bg-gradient-to-br from-neon-pink to-neon-purple rounded-[3rem] transform rotate-3 shadow-lg"></div>
         </div>
       </div>
     </div>
