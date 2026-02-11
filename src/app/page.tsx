@@ -11,18 +11,18 @@ export default function LandingPage() {
       <main>
         {/* Hero */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
-          <div className="bg-gradient-hero rounded-[2.5rem] overflow-hidden shadow-card-hover">
+          <div className="bg-gradient-hero rounded-[2.5rem] overflow-hidden shadow-card-hover transition-smooth hover:shadow-2xl animate-fade-in-up">
             <div className="grid lg:grid-cols-2 gap-0">
               <div className="p-8 sm:p-12 lg:p-16 flex flex-col justify-center">
-                <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1]">
+                <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] animate-fade-in-down">
                   Discover brand champions.
                 </h1>
-                <p className="mt-4 text-white/85 text-base sm:text-lg max-w-md leading-relaxed">
+                <p className="mt-4 text-white/85 text-base sm:text-lg max-w-md leading-relaxed animate-fade-in-down" style={{animationDelay: "0.1s"}}>
                   Search creators, run campaigns, approve content, and track performance—one workspace for social commerce.
                 </p>
                 <div className="mt-8">
-                  <Link href="/auth" className="inline-flex items-center gap-2 bg-white text-gray-900 font-semibold text-sm px-6 py-3.5 rounded-full hover:bg-gray-50 transition-all hover:shadow-lg">
-                    Get Started <ArrowRight className="w-4 h-4" />
+                  <Link href="/auth" className="inline-flex items-center gap-2 bg-white text-gray-900 font-semibold text-sm px-6 py-3.5 rounded-full hover-lift hover:shadow-xl transition-smooth">
+                    Get Started <ArrowRight className="w-4 h-4 transition-smooth group-hover:translate-x-1" />
                   </Link>
                 </div>
               </div>
@@ -36,7 +36,7 @@ export default function LandingPage() {
                     { bg: "bg-neon-purple", label: "Outdoors" },
                     { bg: "bg-neon-cyan", label: "@the.truth.doctor" },
                   ].map((tile, i) => (
-                    <div key={i} className={`${tile.bg} rounded-3xl flex items-end p-3 ${i === 3 ? "col-span-1" : ""} shadow-md`}>
+                    <div key={i} className={`${tile.bg} rounded-3xl flex items-end p-3 ${i === 3 ? "col-span-1" : ""} shadow-md hover-lift transition-smooth animate-fade-in-up`} style={{animationDelay: `${i * 0.05}s`}}>
                       <span className="text-xs font-bold bg-white/90 backdrop-blur px-2.5 py-1 rounded-full truncate">{tile.label}</span>
                     </div>
                   ))}
@@ -74,9 +74,9 @@ export default function LandingPage() {
               { icon: MessageCircle, title: "Instant Chat", desc: "Instantly chat with creators and stay in touch throughout the whole collaboration." },
               { icon: Users, title: "Secure Payments", desc: "Your money is held safely until you approve the creator's work." },
             ].map((f, i) => (
-              <div key={i} className="border border-gray-200 rounded-3xl p-6 hover:shadow-card-hover transition-all hover:border-brand/30 bg-white">
-                <div className="w-10 h-10 rounded-xl bg-brand/15 flex items-center justify-center mb-4">
-                  <f.icon className="w-5 h-5 text-brand" />
+              <div key={i} className="border border-gray-200 rounded-3xl p-6 bg-white hover-lift hover:shadow-card-hover hover:border-brand/30 transition-smooth animate-fade-in-up" style={{animationDelay: `${i * 0.1}s`}}>
+                <div className="w-10 h-10 rounded-xl bg-brand/15 flex items-center justify-center mb-4 transition-smooth group-hover:scale-110">
+                  <f.icon className="w-5 h-5 text-brand transition-smooth" />
                 </div>
                 <h3 className="font-bold text-lg mb-2">{f.title}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{f.desc}</p>
@@ -95,8 +95,8 @@ export default function LandingPage() {
                 { step: "2", title: "Collaborate & Create", desc: "Send briefs, negotiate terms, approve content—all within one organized workspace." },
                 { step: "3", title: "Track & Pay", desc: "Monitor campaign performance in real time and release payments when deliverables are approved." },
               ].map((s, i) => (
-                <div key={i} className="bg-white rounded-3xl p-8 shadow-card hover:shadow-card-hover transition-all">
-                  <div className="w-10 h-10 rounded-full bg-brand text-white flex items-center justify-center font-bold text-lg mb-4">{s.step}</div>
+                <div key={i} className="bg-white rounded-3xl p-8 shadow-card hover-lift hover:shadow-card-hover transition-smooth animate-fade-in-up" style={{animationDelay: `${i * 0.1}s`}}>
+                  <div className="w-10 h-10 rounded-full bg-brand text-white flex items-center justify-center font-bold text-lg mb-4 transition-smooth hover:scale-110">{s.step}</div>
                   <h3 className="font-bold text-xl mb-2">{s.title}</h3>
                   <p className="text-gray-600 leading-relaxed">{s.desc}</p>
                 </div>
@@ -127,7 +127,7 @@ export default function LandingPage() {
           </div>
           <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
             {["Fitness", "Beauty", "Tech", "Food", "Travel", "Fashion"].map((niche, i) => (
-              <div key={i} className={`aspect-[3/4] rounded-[2.5rem] ${["bg-orange-400","bg-pink-400","bg-neon-blue","bg-amber-400","bg-neon-cyan","bg-neon-purple"][i]} flex items-end justify-center p-3 shadow-md hover:shadow-lg transition-all`}>
+              <div key={i} className={`aspect-[3/4] rounded-[2.5rem] ${["bg-orange-400","bg-pink-400","bg-neon-blue","bg-amber-400","bg-neon-cyan","bg-neon-purple"][i]} flex items-end justify-center p-3 shadow-md hover-lift hover:shadow-lg transition-smooth animate-fade-in-up`} style={{animationDelay: `${i * 0.08}s`}}>
                 <span className="text-xs font-bold bg-white/95 backdrop-blur px-3 py-1 rounded-full text-gray-900">{niche}</span>
               </div>
             ))}
