@@ -5,6 +5,7 @@ const config: Config = {
     extend: {
       colors: {
         brand: { DEFAULT: "#5A3CB0", light: "#7C5CE6", dark: "#3D1F8F" },
+        "brand-dark": "#3D1F8F",
         accent: { DEFAULT: "#FFEB3B", dark: "#FDD835" },
         surface: { DEFAULT: "#F8F7F4", dark: "#1A1A1A", card: "#FFFFFF" },
         "neon-pink": "#FF006E",
