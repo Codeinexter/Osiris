@@ -2,7 +2,7 @@ import NavbarPublic from "@/components/NavbarPublic";
 import FooterMega from "@/components/FooterMega";
 import CTAStripYellow from "@/components/CTAStripYellow";
 import Link from "next/link";
-import { Star, Handshake, CheckCircle, DollarSign, Link2, MessageCircle, FileText } from "lucide-react";
+import { Star, Handshake, CheckCircle, DollarSign, Link2, MessageCircle, FileText, ArrowRight } from "lucide-react";
 
 export default function CreatorsPage() {
   return (
