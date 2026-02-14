@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useAuthStore } from "@/stores/auth";
 import { Eye, EyeOff } from "lucide-react";
 import { Toast } from "@/components/UIComponents";
+import GoogleButton from "@/components/GoogleButton";
 
 function SignupForm() {
   const params = useSearchParams();
@@ -65,7 +66,7 @@ function SignupForm() {
           </button>
           <p className="text-center text-sm text-gray-500">Already have an account? <Link href={`/auth/login?role=${role}`} className="underline font-medium text-black">Sign in</Link></p>
           <div className="flex items-center gap-4 my-2"><div className="flex-1 h-px bg-gray-200" /><span className="text-xs text-gray-400">or</span><div className="flex-1 h-px bg-gray-200" /></div>
-          <button type="button" onClick={() => setToast("Google signup coming soon")} className="w-full border border-gray-200 py-3 rounded-xl font-medium text-sm flex items-center justify-center gap-2 hover:bg-gray-50">🔵 Sign up with Google</button>
+          <GoogleButton text="Sign up with Google" />
           <button type="button" onClick={() => setToast("Apple signup coming soon")} className="w-full border border-gray-200 py-3 rounded-xl font-medium text-sm flex items-center justify-center gap-2 hover:bg-gray-50">🍎 Sign up with Apple</button>
           <p className="text-xs text-gray-400 text-center">By signing up, you agree to the <span className="underline">Terms &amp; Conditions</span> and <span className="underline">Privacy Policy</span>.</p>
         </form>

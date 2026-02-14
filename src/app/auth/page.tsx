@@ -3,6 +3,7 @@ import { Suspense, useState } from "react";
 import Link from "next/link";
 import { useSearchParams, useRouter } from "next/navigation";
 import { ArrowRight, Star, AlertCircle, CheckCircle } from "lucide-react";
+import GoogleButton from "@/components/GoogleButton";
 
 function AuthContent() {
   const params = useSearchParams();
@@ -113,25 +114,25 @@ function AuthContent() {
           <Link href="/" className="font-display text-2xl font-bold mb-12 animate-fade-in-down">Osiris</Link>
           {tab === "login" ? (
             <>
-              <h1 className="font-display text-3xl sm:text-4xl font-bold mb-2 animate-fade-in-down" style={{animationDelay: "0.1s"}}>Welcome back</h1>
-              <p className="text-gray-500 mb-8 animate-fade-in-down" style={{animationDelay: "0.2s"}}>Log in to continue managing your campaigns and collaborations.</p>
+              <h1 className="font-display text-3xl sm:text-4xl font-bold mb-2 animate-fade-in-down" style={{ animationDelay: "0.1s" }}>Welcome back</h1>
+              <p className="text-gray-500 mb-8 animate-fade-in-down" style={{ animationDelay: "0.2s" }}>Log in to continue managing your campaigns and collaborations.</p>
               <div className="space-y-4 max-w-md">
                 <Link href="/auth?tab=login&role=creator" className="flex items-center justify-between bg-surface hover:shadow-card-hover transition-all rounded-3xl p-6 border border-gray-200 hover:border-brand/30 hover-lift animate-fade-in-up">
                   <div><h3 className="font-bold text-lg">Creator</h3><p className="text-sm text-gray-600">Access your deals &amp; insights</p></div>
                   <ArrowRight className="w-5 h-5 text-brand transition-smooth group-hover:translate-x-1" />
                 </Link>
-                <Link href="/auth?tab=login&role=brand" className="flex items-center justify-between bg-surface hover:shadow-card-hover transition-all rounded-3xl p-6 border border-gray-200 hover:border-brand/30 hover-lift animate-fade-in-up" style={{animationDelay: "0.1s"}}>
+                <Link href="/auth?tab=login&role=brand" className="flex items-center justify-between bg-surface hover:shadow-card-hover transition-all rounded-3xl p-6 border border-gray-200 hover:border-brand/30 hover-lift animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
                   <div><h3 className="font-bold text-lg">Brand</h3><p className="text-sm text-gray-600">Manage campaigns &amp; creators</p></div>
                   <ArrowRight className="w-5 h-5 text-brand transition-smooth group-hover:translate-x-1" />
                 </Link>
               </div>
-              <p className="text-sm text-gray-500 mt-8 animate-fade-in-down" style={{animationDelay: "0.4s"}}>Don&apos;t have an account? <Link href="/auth?tab=signup" className="underline font-medium text-black hover:text-brand transition-colors">Sign up</Link></p>
+              <p className="text-sm text-gray-500 mt-8 animate-fade-in-down" style={{ animationDelay: "0.4s" }}>Don&apos;t have an account? <Link href="/auth?tab=signup" className="underline font-medium text-black hover:text-brand transition-colors">Sign up</Link></p>
             </>
           ) : (
             <>
-              <h1 className="font-display text-3xl sm:text-4xl font-bold mb-2 animate-fade-in-down" style={{animationDelay: "0.1s"}}>Join Osiris</h1>
-              <div className="flex items-center gap-2 mb-8 animate-fade-in-down" style={{animationDelay: "0.2s"}}>
-                {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-red-500 text-red-500 transition-smooth hover:scale-125" style={{animationDelay: `${i * 0.05}s`}} />)}
+              <h1 className="font-display text-3xl sm:text-4xl font-bold mb-2 animate-fade-in-down" style={{ animationDelay: "0.1s" }}>Join Osiris</h1>
+              <div className="flex items-center gap-2 mb-8 animate-fade-in-down" style={{ animationDelay: "0.2s" }}>
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-red-500 text-red-500 transition-smooth hover:scale-125" style={{ animationDelay: `${i * 0.05}s` }} />)}
                 <span className="text-xs font-bold text-red-600 uppercase tracking-wide">&ldquo;Best customer support&rdquo;</span>
               </div>
               <div className="grid grid-cols-2 gap-4 max-w-lg">
@@ -140,14 +141,14 @@ function AuthContent() {
                   <p className="text-sm text-gray-600">Match with creators</p>
                   <ArrowRight className="w-5 h-5 text-brand mt-2 transition-smooth group-hover:translate-x-1" />
                 </Link>
-                <Link href="/auth?tab=signup&role=creator" className="bg-surface hover:shadow-card-hover transition-all rounded-3xl p-6 flex flex-col justify-between border border-gray-200 hover:border-brand/30 hover-lift animate-fade-in-up" style={{animationDelay: "0.1s"}}>
+                <Link href="/auth?tab=signup&role=creator" className="bg-surface hover:shadow-card-hover transition-all rounded-3xl p-6 flex flex-col justify-between border border-gray-200 hover:border-brand/30 hover-lift animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
                   <div>
                     <h3 className="font-bold text-lg">Creator</h3>
                     <p className="text-sm text-gray-600">Match with brands</p>
                   </div>
                   <ArrowRight className="w-5 h-5 text-brand mt-2 transition-smooth group-hover:translate-x-1" />
                 </Link>
-                <div className="bg-gray-50 rounded-3xl p-6 flex flex-col justify-between opacity-60 border border-gray-200 transition-smooth hover:opacity-100 animate-fade-in-up" style={{animationDelay: "0.2s"}}>
+                <div className="bg-gray-50 rounded-3xl p-6 flex flex-col justify-between opacity-60 border border-gray-200 transition-smooth hover:opacity-100 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
                   <div>
                     <h3 className="font-bold text-lg">Talent Agency</h3>
                     <p className="text-sm text-gray-500">Coming soon</p>
@@ -155,7 +156,7 @@ function AuthContent() {
                   <ArrowRight className="w-5 h-5 text-gray-300 mt-2" />
                 </div>
               </div>
-              <p className="text-sm text-gray-500 mt-8 animate-fade-in-down" style={{animationDelay: "0.4s"}}>Already have an account? <Link href="/auth?tab=login" className="underline font-medium text-black hover:text-brand transition-colors">Log In</Link></p>
+              <p className="text-sm text-gray-500 mt-8 animate-fade-in-down" style={{ animationDelay: "0.4s" }}>Already have an account? <Link href="/auth?tab=login" className="underline font-medium text-black hover:text-brand transition-colors">Log In</Link></p>
             </>
           )}
         </div>
@@ -178,10 +179,10 @@ function AuthContent() {
       <div className="flex flex-col justify-center px-8 sm:px-16 lg:px-24 py-12">
         <Link href="/" className="font-display text-2xl font-bold mb-12 animate-fade-in-down">Osiris</Link>
 
-        <h1 className="font-display text-3xl sm:text-4xl font-bold mb-2 animate-fade-in-down" style={{animationDelay: "0.1s"}}>
+        <h1 className="font-display text-3xl sm:text-4xl font-bold mb-2 animate-fade-in-down" style={{ animationDelay: "0.1s" }}>
           {isLogin ? "Welcome back" : `Join as ${roleLabel}`}
         </h1>
-        <p className="text-gray-600 mb-8 animate-fade-in-down" style={{animationDelay: "0.2s"}}>
+        <p className="text-gray-600 mb-8 animate-fade-in-down" style={{ animationDelay: "0.2s" }}>
           {isLogin
             ? "Log in to continue managing your account and collaborations."
             : `Create your ${roleLabel.toLowerCase()} account to get started.`}
@@ -196,7 +197,7 @@ function AuthContent() {
         )}
 
         {/* Form */}
-        <form onSubmit={isLogin ? handleLogin : handleSignup} className="max-w-md space-y-4 animate-fade-in-up" style={{animationDelay: "0.3s"}}>
+        <form onSubmit={isLogin ? handleLogin : handleSignup} className="max-w-md space-y-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
           {/* Email Field */}
           <div>
             <label className="block text-sm font-semibold text-gray-900 mb-2">Email Address</label>
@@ -262,18 +263,23 @@ function AuthContent() {
             )}
           </div>
 
+          {/* Google Sign In */}
+          <div className="mt-4">
+            <GoogleButton text={isLogin ? "Sign in with Google" : "Sign up with Google"} />
+          </div>
+
           {/* Submit Button */}
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-brand text-white font-semibold py-3 rounded-xl hover:bg-brand-dark transition-all disabled:opacity-50 disabled:cursor-not-allowed mt-6"
+            className="w-full bg-brand text-white font-semibold py-3 rounded-xl hover:bg-brand-dark transition-all disabled:opacity-50 disabled:cursor-not-allowed mt-4"
           >
             {loading ? "Processing..." : isLogin ? "Log In" : "Create Account"}
           </button>
         </form>
 
         {/* Toggle Tab Link */}
-        <p className="text-sm text-gray-600 mt-6 text-center animate-fade-in-up" style={{animationDelay: "0.4s"}}>
+        <p className="text-sm text-gray-600 mt-6 text-center animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
           {isLogin ? "Don't have an account? " : "Already have an account? "}
           <Link
             href={`/auth?tab=${isLogin ? "signup" : "login"}&role=${role}`}

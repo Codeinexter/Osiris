@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useAuthStore } from "@/stores/auth";
 import { Eye, EyeOff } from "lucide-react";
 import { Toast } from "@/components/UIComponents";
+import GoogleButton from "@/components/GoogleButton";
 
 function LoginForm() {
   const params = useSearchParams();
@@ -61,9 +62,7 @@ function LoginForm() {
             {loading ? "Signing in..." : "Continue"}
           </button>
           <div className="flex items-center gap-4 my-4"><div className="flex-1 h-px bg-gray-200" /><span className="text-xs text-gray-400">or</span><div className="flex-1 h-px bg-gray-200" /></div>
-          <button type="button" onClick={() => setToast("Google login coming soon")} className="w-full border border-gray-200 py-3 rounded-xl font-medium text-sm flex items-center justify-center gap-2 hover:bg-gray-50">
-            <span>🔵</span> Sign in with Google
-          </button>
+          <GoogleButton text="Sign in with Google" />
           <button type="button" onClick={() => setToast("Apple login coming soon")} className="w-full border border-gray-200 py-3 rounded-xl font-medium text-sm flex items-center justify-center gap-2 hover:bg-gray-50">
             <span>🍎</span> Sign in with Apple
           </button>
