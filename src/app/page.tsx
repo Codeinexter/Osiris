@@ -1,10 +1,36 @@
+"use client";
+
 import NavbarPublic from "@/components/NavbarPublic";
 import FooterMega from "@/components/FooterMega";
 import CTAStripYellow from "@/components/CTAStripYellow";
 import Link from "next/link";
 import { ArrowRight, Star, Users, BarChart3, Zap, Shield, MessageCircle } from "lucide-react";
+import { useState } from "react";
 
 export default function LandingPage() {
+  const [selectedCategory, setSelectedCategory] = useState("All Categories");
+
+  // Mock data for creators with their categories
+  const creators = [
+    { category: "Fashion", color: "bg-pink-300" },
+    { category: "Beauty", color: "bg-purple-300" },
+    { category: "Tech", color: "bg-blue-300" },
+    { category: "Food", color: "bg-orange-300" },
+    { category: "Fitness", color: "bg-green-300" },
+    { category: "Travel", color: "bg-teal-300" },
+    { category: "Finance", color: "bg-emerald-300" },
+    { category: "Gaming", color: "bg-indigo-300" },
+    // Duplicates to fill out the grid for "All" view or specific views
+    { category: "Fashion", color: "bg-pink-400" },
+    { category: "Tech", color: "bg-blue-400" },
+    { category: "Food", color: "bg-amber-300" },
+    { category: "Travel", color: "bg-cyan-300" },
+  ];
+
+  const filteredCreators = selectedCategory === "All Categories"
+    ? creators
+    : creators.filter(c => c.category === selectedCategory);
+
   return (
     <>
       <NavbarPublic />
@@ -17,7 +43,7 @@ export default function LandingPage() {
                 <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] animate-fade-in-down">
                   Discover brand champions.
                 </h1>
-                <p className="mt-4 text-white/85 text-base sm:text-lg max-w-md leading-relaxed animate-fade-in-down" style={{animationDelay: "0.1s"}}>
+                <p className="mt-4 text-white/85 text-base sm:text-lg max-w-md leading-relaxed animate-fade-in-down" style={{ animationDelay: "0.1s" }}>
                   Search creators, run campaigns, approve content, and track performance—one workspace for social commerce.
                 </p>
                 <div className="mt-8">
@@ -36,7 +62,7 @@ export default function LandingPage() {
                     { bg: "bg-neon-purple", label: "Outdoors" },
                     { bg: "bg-neon-cyan", label: "@the.truth.doctor" },
                   ].map((tile, i) => (
-                    <div key={i} className={`${tile.bg} rounded-3xl flex items-end p-3 ${i === 3 ? "col-span-1" : ""} shadow-md hover-lift transition-smooth animate-fade-in-up`} style={{animationDelay: `${i * 0.05}s`}}>
+                    <div key={i} className={`${tile.bg} rounded-3xl flex items-end p-3 ${i === 3 ? "col-span-1" : ""} shadow-md hover-lift transition-smooth animate-fade-in-up`} style={{ animationDelay: `${i * 0.05}s` }}>
                       <span className="text-xs font-bold bg-white/90 backdrop-blur px-2.5 py-1 rounded-full truncate">{tile.label}</span>
                     </div>
                   ))}
@@ -74,7 +100,7 @@ export default function LandingPage() {
               { icon: MessageCircle, title: "Instant Chat", desc: "Instantly chat with creators and stay in touch throughout the whole collaboration." },
               { icon: Users, title: "Secure Payments", desc: "Your money is held safely until you approve the creator's work." },
             ].map((f, i) => (
-              <div key={i} className="border border-gray-200 rounded-3xl p-6 bg-white hover-lift hover:shadow-card-hover hover:border-brand/30 transition-smooth animate-fade-in-up" style={{animationDelay: `${i * 0.1}s`}}>
+              <div key={i} className="border border-gray-200 rounded-3xl p-6 bg-white hover-lift hover:shadow-card-hover hover:border-brand/30 transition-smooth animate-fade-in-up" style={{ animationDelay: `${i * 0.1}s` }}>
                 <div className="w-10 h-10 rounded-xl bg-brand/15 flex items-center justify-center mb-4 transition-smooth group-hover:scale-110">
                   <f.icon className="w-5 h-5 text-brand transition-smooth" />
                 </div>
@@ -95,7 +121,7 @@ export default function LandingPage() {
                 { step: "2", title: "Collaborate & Create", desc: "Send briefs, negotiate terms, approve content—all within one organized workspace." },
                 { step: "3", title: "Track & Pay", desc: "Monitor campaign performance in real time and release payments when deliverables are approved." },
               ].map((s, i) => (
-                <div key={i} className="bg-white rounded-3xl p-8 shadow-card hover-lift hover:shadow-card-hover transition-smooth animate-fade-in-up" style={{animationDelay: `${i * 0.1}s`}}>
+                <div key={i} className="bg-white rounded-3xl p-8 shadow-card hover-lift hover:shadow-card-hover transition-smooth animate-fade-in-up" style={{ animationDelay: `${i * 0.1}s` }}>
                   <div className="w-10 h-10 rounded-full bg-brand text-white flex items-center justify-center font-bold text-lg mb-4 transition-smooth hover:scale-110">{s.step}</div>
                   <h3 className="font-bold text-xl mb-2">{s.title}</h3>
                   <p className="text-gray-600 leading-relaxed">{s.desc}</p>
@@ -120,17 +146,41 @@ export default function LandingPage() {
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-center mb-10">Creators for every industry</h2>
           <div className="flex flex-wrap justify-center gap-2 mb-10">
             {["All Categories", "Fashion", "Beauty", "Tech", "Food", "Fitness", "Travel", "Finance", "Gaming"].map((cat, i) => (
-              <button key={i} className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${i === 0 ? "bg-accent text-black font-semibold shadow-md" : "bg-gray-100 text-gray-600 hover:bg-gray-200"}`}>
+              <button
+                key={i}
+                onClick={() => setSelectedCategory(cat)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${selectedCategory === cat
+                    ? "bg-accent text-black font-semibold shadow-md"
+                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                  }`}
+              >
                 {cat}
               </button>
             ))}
           </div>
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
-            {["Fitness", "Beauty", "Tech", "Food", "Travel", "Fashion"].map((niche, i) => (
-              <div key={i} className={`aspect-[3/4] rounded-[2.5rem] ${["bg-orange-400","bg-pink-400","bg-neon-blue","bg-amber-400","bg-neon-cyan","bg-neon-purple"][i]} flex items-end justify-center p-3 shadow-md hover-lift hover:shadow-lg transition-smooth animate-fade-in-up`} style={{animationDelay: `${i * 0.08}s`}}>
-                <span className="text-xs font-bold bg-white/95 backdrop-blur px-3 py-1 rounded-full text-gray-900">{niche}</span>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {filteredCreators.length > 0 ? (
+              filteredCreators.map((creator, i) => (
+                <div
+                  key={i}
+                  className={`aspect-[3/4] rounded-[2.5rem] ${creator.color} flex items-end justify-center p-3 shadow-md hover-lift hover:shadow-lg transition-smooth animate-fade-in-up`}
+                  style={{ animationDelay: `${i * 0.05}s` }}
+                >
+                  <div className="text-center w-full">
+                    <div className="mb-2">
+                      <span className="text-xs font-bold bg-white/95 backdrop-blur px-3 py-1 rounded-full text-gray-900 shadow-sm inline-block mb-1">
+                        {creator.category}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <div className="col-span-full text-center py-10 text-gray-500">
+                No creators found in this category.
               </div>
-            ))}
+            )}
           </div>
         </section>
 

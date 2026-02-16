@@ -18,7 +18,7 @@ export default function FooterMega() {
             </Link>
             <p className="text-gray-500 text-xs mt-6">© Osiris Inc. 2026. All rights reserved.</p>
           </div>
-          <div className="animate-fade-in-up" style={{animationDelay: "0.1s"}}>
+          <div className="animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
             <h4 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Platform</h4>
             <ul className="space-y-3 text-sm text-gray-300">
               <li><Link href="/auth" className="hover:text-white transition-smooth hover:translate-x-1 inline-block">Platform Login</Link></li>
@@ -27,7 +27,7 @@ export default function FooterMega() {
               <li><Link href="/auth" className="hover:text-white transition-smooth hover:translate-x-1 inline-block">Sign Up</Link></li>
             </ul>
           </div>
-          <div className="animate-fade-in-up" style={{animationDelay: "0.2s"}}>
+          <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             <h4 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Company</h4>
             <ul className="space-y-3 text-sm text-gray-300">
               <li><span className="hover:text-white transition-smooth cursor-default">Community</span></li>
@@ -43,7 +43,7 @@ export default function FooterMega() {
               ))}
             </div>
           </div>
-          <div className="animate-fade-in-up" style={{animationDelay: "0.3s"}}>
+          <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             <h4 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Legal & Policies</h4>
             <ul className="space-y-3 text-sm text-gray-300">
               <li><span className="cursor-default hover:text-white transition-smooth">Trust Center</span></li>
@@ -53,14 +53,23 @@ export default function FooterMega() {
               <li><span className="cursor-default hover:text-white transition-smooth">Creator Terms of Service</span></li>
             </ul>
           </div>
-          <div className="animate-fade-in-up" style={{animationDelay: "0.4s"}}>
+          <div className="animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
             <h4 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Subscribe to our newsletter</h4>
             {subscribed ? (
               <p className="text-sm text-green-400 animate-fade-in-up">Thanks for subscribing!</p>
             ) : (
-              <div className="flex rounded-lg overflow-hidden border border-gray-600 transition-smooth hover:border-accent focus-within:border-accent">
-                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Work email*" className="flex-1 bg-transparent px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none transition-smooth" />
-                <button onClick={() => { if (email) setSubscribed(true); }} className="bg-accent text-gray-900 font-bold text-sm px-5 py-2.5 hover:bg-accent-dark transition-smooth hover:shadow-lg active:scale-95">
+              <div className="flex w-full rounded-lg overflow-hidden border border-gray-600 transition-smooth hover:border-accent focus-within:border-accent">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Work email*"
+                  className="flex-1 bg-transparent px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none transition-smooth min-w-0"
+                />
+                <button
+                  onClick={() => { if (email) setSubscribed(true); }}
+                  className="bg-accent text-gray-900 font-bold text-sm px-5 py-2.5 hover:bg-accent-dark transition-smooth hover:shadow-lg active:scale-95 whitespace-nowrap flex-shrink-0"
+                >
                   Submit
                 </button>
               </div>
