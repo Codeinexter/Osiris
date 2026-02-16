@@ -17,62 +17,74 @@ export default function LandingPage() {
     { category: "Fitness", url: "/videos/fitness_2.mp4" },
     { category: "Fitness", url: "/videos/fitness_3.mp4" },
     { category: "Fitness", url: "/videos/fitness_4.mp4" },
-    { category: "Fitness", url: "/videos/fitness_5.mp4" },
-    { category: "Fitness", url: "/videos/fitness_6.mp4" },
-    { category: "Fitness", url: "/videos/fitness_7.mp4" },
-    { category: "Fitness", url: "/videos/fitness_8.mp4" },
-    { category: "Fitness", url: "/videos/fitness_9.mp4" },
-    { category: "Fitness", url: "/videos/fitness_10.mp4" },
-    { category: "Fitness", url: "/videos/fitness_11.mp4" },
+    // { category: "Fitness", url: "/videos/fitness_5.mp4" },
+    // { category: "Fitness", url: "/videos/fitness_6.mp4" },
+    // { category: "Fitness", url: "/videos/fitness_7.mp4" },
+    // { category: "Fitness", url: "/videos/fitness_8.mp4" },
+    // { category: "Fitness", url: "/videos/fitness_9.mp4" },
+    // { category: "Fitness", url: "/videos/fitness_10.mp4" },
+    // { category: "Fitness", url: "/videos/fitness_11.mp4" },
     // Fashion
     { category: "Fashion", url: "/videos/fashion_1.mp4" },
     { category: "Fashion", url: "/videos/fashion_2.mp4" },
     { category: "Fashion", url: "/videos/fashion_3.mp4" },
     { category: "Fashion", url: "/videos/fashion_4.mp4" },
-    { category: "Fashion", url: "/videos/fashion_5.mp4" },
-    { category: "Fashion", url: "/videos/fashion_6.mp4" },
+    //{ category: "Fashion", url: "/videos/fashion_5.mp4" },
+    //{ category: "Fashion", url: "/videos/fashion_6.mp4" },
     // Tech
     { category: "Tech", url: "/videos/tech_1.mp4" },
     { category: "Tech", url: "/videos/tech_2.mp4" },
     { category: "Tech", url: "/videos/tech_3.mp4" },
     { category: "Tech", url: "/videos/tech_4.mp4" },
-    { category: "Tech", url: "/videos/tech_5.mp4" },
-    { category: "Tech", url: "/videos/tech_6.mp4" },
+    // { category: "Tech", url: "/videos/tech_5.mp4" },
+    // { category: "Tech", url: "/videos/tech_6.mp4" },
     // Food
     { category: "Food", url: "/videos/food_1.mp4" },
     { category: "Food", url: "/videos/food_2.mp4" },
     { category: "Food", url: "/videos/food_3.mp4" },
     { category: "Food", url: "/videos/food_4.mp4" },
-    { category: "Food", url: "/videos/food_5.mp4" },
-    { category: "Food", url: "/videos/food_6.mp4" },
+    //{ category: "Food", url: "/videos/food_5.mp4" },
+    //{ category: "Food", url: "/videos/food_6.mp4" },
     // Travel
     { category: "Travel", url: "/videos/travel_1.mp4" },
     { category: "Travel", url: "/videos/travel_2.mp4" },
     { category: "Travel", url: "/videos/travel_3.mp4" },
     { category: "Travel", url: "/videos/travel_4.mp4" },
-    { category: "Travel", url: "/videos/travel_5.mp4" },
-    { category: "Travel", url: "/videos/travel_6.mp4" },
+    // { category: "Travel", url: "/videos/travel_5.mp4" },
+    // { category: "Travel", url: "/videos/travel_6.mp4" },
     // Gaming
     { category: "Gaming", url: "/videos/gaming_1.mp4" },
     { category: "Gaming", url: "/videos/gaming_2.mp4" },
     { category: "Gaming", url: "/videos/gaming_3.mp4" },
     { category: "Gaming", url: "/videos/gaming_4.mp4" },
-    { category: "Gaming", url: "/videos/gaming_5.mp4" },
-    { category: "Gaming", url: "/videos/gaming_6.mp4" },
+    // { category: "Gaming", url: "/videos/gaming_5.mp4" },
+    // { category: "Gaming", url: "/videos/gaming_6.mp4" },
     // Beauty
     { category: "Beauty", url: "/videos/beauty_1.mp4" },
     { category: "Beauty", url: "/videos/beauty_2.mp4" },
     { category: "Beauty", url: "/videos/beauty_3.mp4" },
     { category: "Beauty", url: "/videos/beauty_4.mp4" },
-    { category: "Beauty", url: "/videos/beauty_5.mp4" },
-    { category: "Beauty", url: "/videos/beauty_6.mp4" },
-    { category: "Beauty", url: "/videos/beauty_7.mp4" },
-
+    // { category: "Beauty", url: "/videos/beauty_5.mp4" },
+    // { category: "Beauty", url: "/videos/beauty_6.mp4" },
+    // { category: "Beauty", url: "/videos/beauty_7.mp4" },
+    { category: "Finance", url: "/videos/finance_1.mp4" },
+    { category: "Finance", url: "/videos/finance_2.mp4" },
+    { category: "Finance", url: "/videos/finance_3.mp4" },
+    { category: "Finance", url: "/videos/finance_4.mp4" },
+    // { category: "Finance", url: "/videos/finance_5.mp4" },
+    // { category: "Finance", url: "/videos/finance_6.mp4" },
+    // { category: "Finance", url: "/videos/finance_7.mp4" },
   ];
 
-  const filteredCreators = selectedCategory === "All Categories"
-    ? creators
-    : creators.filter(c => c.category === selectedCategory);
+  const filteredCreators =
+    selectedCategory === "All Categories"
+      ? Array.from(
+        new Map(
+          creators.map((c) => [c.category, c]) // keeps first occurrence per category
+        ).values()
+      )
+      : creators.filter((c) => c.category === selectedCategory);
+
 
   return (
     <>
@@ -102,8 +114,8 @@ export default function LandingPage() {
                     { url: "/videos/fitness_1.mp4", aspect: "col-span-2 row-span-2" }, // Fitness
                     { url: "/videos/fashion_1.mp4", aspect: "col-span-1 row-span-1" }, // Fashion
                     { url: "/videos/tech_1.mp4", aspect: "col-span-1 row-span-1" }, // Tech
-                    { url: "/videos/food_1.mp4", aspect: "col-span-1 row-span-1" }, // Food
-                    { url: "/videos/travel_1.mp4", aspect: "col-span-1 row-span-1" }, // Travel
+                    // { url: "/videos/food_1.mp4", aspect: "col-span-1 row-span-1" }, // Food
+                    // { url: "/videos/travel_1.mp4", aspect: "col-span-1 row-span-1" }, // Travel
                   ].map((tile, i) => (
                     <div
                       key={i}
