@@ -12,19 +12,72 @@ export default function LandingPage() {
 
   // Mock data for creators with their categories
   const creators = [
-    { category: "Fashion", color: "bg-pink-300" },
-    { category: "Beauty", color: "bg-purple-300" },
-    { category: "Tech", color: "bg-blue-300" },
-    { category: "Food", color: "bg-orange-300" },
-    { category: "Fitness", color: "bg-green-300" },
-    { category: "Travel", color: "bg-teal-300" },
-    { category: "Finance", color: "bg-emerald-300" },
-    { category: "Gaming", color: "bg-indigo-300" },
-    // Duplicates to fill out the grid for "All" view or specific views
-    { category: "Fashion", color: "bg-pink-400" },
-    { category: "Tech", color: "bg-blue-400" },
-    { category: "Food", color: "bg-amber-300" },
-    { category: "Travel", color: "bg-cyan-300" },
+    // Fitness
+    { category: "Fitness", url: "https://www.instagram.com/reel/CoFdmkzJ6Cj/" },
+    { category: "Fitness", url: "https://www.instagram.com/reel/DUzBxl_kwh1/" },
+    { category: "Fitness", url: "https://www.instagram.com/reel/DT-g6dRiJjn/" },
+    { category: "Fitness", url: "https://www.instagram.com/reel/DU0EFt1iR1C/" },
+    { category: "Fitness", url: "https://www.instagram.com/p/BGxnBBAkhxQ/" },
+    { category: "Fitness", url: "https://www.instagram.com/reel/Ci6p9KbJ2Xj/" },
+    { category: "Fitness", url: "https://www.instagram.com/reel/DKUu1pEvTaK/" },
+    { category: "Fitness", url: "https://www.instagram.com/reel/DO96Gy7gSdm/" },
+    { category: "Fitness", url: "https://www.instagram.com/reel/C6L1EMOyxM8/" },
+    { category: "Fitness", url: "https://www.instagram.com/reel/CNH-VX4AQ90/" },
+    { category: "Fitness", url: "https://www.instagram.com/reel/DSxGbtMkjoV/" },
+    // Fashion
+    { category: "Fashion", url: "https://www.instagram.com/reel/Cz8rxeLM9za/" },
+    { category: "Fashion", url: "https://www.instagram.com/reel/DLX8dVyzFyM/" },
+    { category: "Fashion", url: "https://www.instagram.com/reel/DP8zcqAkk9q/" },
+    { category: "Fashion", url: "https://www.instagram.com/reel/DUiL3WiAQOa/" },
+    { category: "Fashion", url: "https://www.instagram.com/reel/DRSmpmnDoAV/" },
+    { category: "Fashion", url: "https://www.instagram.com/reel/DRMQIOhkUBa/" },
+    { category: "Fashion", url: "https://www.instagram.com/reel/Cz8rxeLM9za/" }, // Duplicate to fill grid
+    { category: "Fashion", url: "https://www.instagram.com/reel/DLX8dVyzFyM/" }, // Duplicate to fill grid
+    // Tech
+    { category: "Tech", url: "https://www.instagram.com/reel/DRAIEoxE9sN/" },
+    { category: "Tech", url: "https://www.instagram.com/reel/DBlj_VFx0u0/" },
+    { category: "Tech", url: "https://www.instagram.com/reel/DOaHK7bERIg/" },
+    { category: "Tech", url: "https://www.instagram.com/reel/DQ0eGoUEoOW/" },
+    { category: "Tech", url: "https://www.instagram.com/reel/DJ6mms4yKwO/" },
+    { category: "Tech", url: "https://www.instagram.com/reel/DTNYwK8kekK/" },
+    { category: "Tech", url: "https://www.instagram.com/reel/DRAIEoxE9sN/" }, // Duplicate
+    { category: "Tech", url: "https://www.instagram.com/reel/DBlj_VFx0u0/" }, // Duplicate
+    // Food
+    { category: "Food", url: "https://www.instagram.com/reel/ClRQFkRIK0m/" },
+    { category: "Food", url: "https://www.instagram.com/reel/DSX5PatCCtG/" },
+    { category: "Food", url: "https://www.instagram.com/reel/DRTv9oYgX7a/" },
+    { category: "Food", url: "https://www.instagram.com/reel/DUZ3suHjDvQ/" },
+    { category: "Food", url: "https://www.instagram.com/reel/DUSSQ_JiRF9/" },
+    { category: "Food", url: "https://www.instagram.com/reel/DPAKRa8jabI/" },
+    { category: "Food", url: "https://www.instagram.com/reel/ClRQFkRIK0m/" }, // Duplicate
+    { category: "Food", url: "https://www.instagram.com/reel/DSX5PatCCtG/" }, // Duplicate
+    // Travel
+    { category: "Travel", url: "https://www.instagram.com/reel/DO6LSHPjJkT/" },
+    { category: "Travel", url: "https://www.instagram.com/reel/DHdxalPN-Jg/" },
+    { category: "Travel", url: "https://www.instagram.com/reel/DM2WE0oMFv-/" },
+    { category: "Travel", url: "https://www.instagram.com/reel/DMegxAaRT1K/" },
+    { category: "Travel", url: "https://www.instagram.com/reel/DTUBZJdglPF/" },
+    { category: "Travel", url: "https://www.instagram.com/reel/C_vJcN3S-_l/" },
+    { category: "Travel", url: "https://www.instagram.com/reel/DO6LSHPjJkT/" }, // Duplicate
+    { category: "Travel", url: "https://www.instagram.com/reel/DHdxalPN-Jg/" }, // Duplicate
+    // Gaming
+    { category: "Gaming", url: "https://www.instagram.com/reel/DDlFYmxtS19/" },
+    { category: "Gaming", url: "https://www.instagram.com/reel/DKzvAsUhe3X/" },
+    { category: "Gaming", url: "https://www.instagram.com/reel/C_ksBqdoqOS/" },
+    { category: "Gaming", url: "https://www.instagram.com/reel/DA2UAkbNXks/" },
+    { category: "Gaming", url: "https://www.instagram.com/reel/DSH4KyTCPtj/" },
+    { category: "Gaming", url: "https://www.instagram.com/reel/DLR_F_xxrY1/" },
+    { category: "Gaming", url: "https://www.instagram.com/reel/DDlFYmxtS19/" }, // Duplicate
+    { category: "Gaming", url: "https://www.instagram.com/reel/DKzvAsUhe3X/" }, // Duplicate
+    // Beauty
+    { category: "Beauty", url: "https://www.instagram.com/reel/DQDl52ekvG5/" },
+    { category: "Beauty", url: "https://www.instagram.com/reel/DLXup_JpUXd/" },
+    { category: "Beauty", url: "https://www.instagram.com/reel/DPWTD0AiZ5U/" },
+    { category: "Beauty", url: "https://www.instagram.com/reel/DNTQJpxis5U/" },
+    { category: "Beauty", url: "https://www.instagram.com/reel/DOBAJ42EkV4/" },
+    { category: "Beauty", url: "https://www.instagram.com/reel/DOREwHUjHRU/" },
+    { category: "Beauty", url: "https://www.instagram.com/reel/DPL6k9_AcGq/" },
+    { category: "Beauty", url: "https://www.instagram.com/reel/DQDl52ekvG5/" }, // Duplicate
   ];
 
   const filteredCreators = selectedCategory === "All Categories"
@@ -55,22 +108,27 @@ export default function LandingPage() {
               <div className="p-4 sm:p-6 lg:p-8">
                 <div className="grid grid-cols-3 grid-rows-2 gap-3 h-full min-h-[300px]">
                   {[
-                    { videoId: "CxQxwxR-8F0", aspect: "col-span-2 row-span-2" },
-                    { videoId: "CxQxwxR-8F0", aspect: "col-span-1 row-span-1" },
-                    { videoId: "CxQxwxR-8F0", aspect: "col-span-1 row-span-1" },
-                    { videoId: "CxQxwxR-8F0", aspect: "col-span-1 row-span-1" },
-                    { videoId: "CxQxwxR-8F0", aspect: "col-span-1 row-span-1" },
+                    // Hero Collage Reels - Mix from various categories
+                    { url: "https://www.instagram.com/reel/CoFdmkzJ6Cj/", aspect: "col-span-2 row-span-2" }, // Fitness
+                    { url: "https://www.instagram.com/reel/Cz8rxeLM9za/", aspect: "col-span-1 row-span-1" }, // Fashion
+                    { url: "https://www.instagram.com/reel/DRAIEoxE9sN/", aspect: "col-span-1 row-span-1" }, // Tech
+                    { url: "https://www.instagram.com/reel/ClRQFkRIK0m/", aspect: "col-span-1 row-span-1" }, // Food
+                    { url: "https://www.instagram.com/reel/DO6LSHPjJkT/", aspect: "col-span-1 row-span-1" }, // Travel
                   ].map((tile, i) => (
                     <div
                       key={i}
-                      className={`${tile.aspect} rounded-3xl overflow-hidden shadow-md hover-lift transition-smooth animate-fade-in-up bg-gray-900`}
+                      className={`${tile.aspect} rounded-3xl overflow-hidden shadow-md hover-lift transition-smooth animate-fade-in-up bg-gray-900 relative group`}
                       style={{ animationDelay: `${i * 0.05}s` }}
                     >
-                      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
-                        <svg className="w-12 h-12 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
-                          <path d="M2 6a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
-                        </svg>
-                      </div>
+                      <iframe
+                        src={`${tile.url}embed`}
+                        className="w-full h-full absolute inset-0 border-0"
+                        allowFullScreen
+                        loading="lazy"
+                        scrolling="no"
+                      />
+                      {/* Interaction overlay to prevent iframe stealing clicks but allow scrolling if needed, or just let users click play */}
+                      {/* For now keeping plain iframe */}
                     </div>
                   ))}
                 </div>
@@ -166,20 +224,25 @@ export default function LandingPage() {
             ))}
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {filteredCreators.length > 0 ? (
               filteredCreators.map((creator, i) => (
                 <div
                   key={i}
-                  className={`aspect-[3/4] rounded-[2.5rem] ${creator.color} flex items-end justify-center p-3 shadow-md hover-lift hover:shadow-lg transition-smooth animate-fade-in-up`}
+                  className="aspect-[9/16] rounded-[2rem] overflow-hidden shadow-md hover-lift hover:shadow-lg transition-smooth animate-fade-in-up bg-gray-100 relative group"
                   style={{ animationDelay: `${i * 0.05}s` }}
                 >
-                  <div className="text-center w-full">
-                    <div className="mb-2">
-                      <span className="text-xs font-bold bg-white/95 backdrop-blur px-3 py-1 rounded-full text-gray-900 shadow-sm inline-block mb-1">
-                        {creator.category}
-                      </span>
-                    </div>
+                  <iframe
+                    src={`${creator.url}embed`}
+                    className="w-full h-full absolute inset-0 border-0"
+                    allowFullScreen
+                    loading="lazy"
+                    scrolling="no"
+                  />
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                    <span className="text-xs font-bold bg-white/95 backdrop-blur px-3 py-1 rounded-full text-gray-900 shadow-sm">
+                      {creator.category}
+                    </span>
                   </div>
                 </div>
               ))
