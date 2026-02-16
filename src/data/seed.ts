@@ -56,6 +56,57 @@ export const campaigns = [
   { id: "c6", brandId: "7", name: "Financial Wellness Series", status: "draft", goals: ["Brand Awareness", "App Downloads"], deliverables: "YouTube + Instagram Reels", budget: 25000, timeline: "Feb 2026 - May 2026", creatorsInvited: 3, creatorsAccepted: 0, createdAt: "2026-01-20" },
 ];
 
+export const categories = [
+  {
+    name: "Beauty",
+    subCategories: ["Skincare", "Makeup", "Haircare", "Aesthetic Lifestyle Beauty", "Other"],
+  },
+  {
+    name: "Fashion",
+    subCategories: ["Women Fashion", "Mens Fashion", "Special Segments", "Other"],
+  },
+  {
+    name: "Tech",
+    subCategories: ["Consumer Tech", "Advanced Tech", "Gaming Tech", "Other"],
+  },
+  {
+    name: "Food",
+    subCategories: ["Basic Food Content", "Nutrition and Diet", "Food Review/Vlogging", "Other"],
+  },
+  {
+    name: "Fitness",
+    subCategories: ["Home Workouts", "Yoga", "Bodybuilding", "Calisthenics", "Other"],
+  },
+  {
+    name: "Health",
+    subCategories: ["General Health", "Medical Professionals", "Mental Health", "Other"],
+  },
+  {
+    name: "Travel",
+    subCategories: ["Vlogging", "Other"],
+  },
+  {
+    name: "Finance",
+    subCategories: ["Stock Market", "Personal Finance", "Trading", "Investing", "Other"],
+  },
+  {
+    name: "Gaming",
+    subCategories: ["Streaming", "Mobile", "PC", "Other"],
+  },
+  {
+    name: "Education",
+    subCategories: ["Academics", "Skill Based", "Career", "Other"],
+  },
+  {
+    name: "Home",
+    subCategories: ["Home Decor", "Home Improvement", "Lifestyle", "Other"],
+  },
+  {
+    name: "Entertainment",
+    subCategories: ["Pop Culture", "Comedy", "Celebrity", "Music", "Other"],
+  },
+];
+
 export const mockUsers = [
   { id: "u1", email: "creator@test.com", password: "password123", role: "creator" as const, name: "Priya Sharma", handle: "priyafits", onboarded: true },
   { id: "u2", email: "brand@test.com", password: "password123", role: "brand" as const, name: "Glow Labs Team", brandSlug: "glow-labs", onboarded: true },

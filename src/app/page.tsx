@@ -29,15 +29,22 @@ export default function LandingPage() {
               <div className="p-4 sm:p-6 lg:p-8">
                 <div className="grid grid-cols-3 grid-rows-2 gap-3 h-full min-h-[300px]">
                   {[
-                    { bg: "bg-neon-blue", label: "@samanthalu" },
-                    { bg: "bg-pink-300", label: "Fashion" },
-                    { bg: "bg-amber-300", label: "@alenpalander" },
-                    { bg: "bg-emerald-300", label: "Pets" },
-                    { bg: "bg-neon-purple", label: "Outdoors" },
-                    { bg: "bg-neon-cyan", label: "@the.truth.doctor" },
+                    { videoId: "CxQxwxR-8F0", aspect: "col-span-2 row-span-2" },
+                    { videoId: "CxQxwxR-8F0", aspect: "col-span-1 row-span-1" },
+                    { videoId: "CxQxwxR-8F0", aspect: "col-span-1 row-span-1" },
+                    { videoId: "CxQxwxR-8F0", aspect: "col-span-1 row-span-1" },
+                    { videoId: "CxQxwxR-8F0", aspect: "col-span-1 row-span-1" },
                   ].map((tile, i) => (
-                    <div key={i} className={`${tile.bg} rounded-3xl flex items-end p-3 ${i === 3 ? "col-span-1" : ""} shadow-md hover-lift transition-smooth animate-fade-in-up`} style={{animationDelay: `${i * 0.05}s`}}>
-                      <span className="text-xs font-bold bg-white/90 backdrop-blur px-2.5 py-1 rounded-full truncate">{tile.label}</span>
+                    <div
+                      key={i}
+                      className={`${tile.aspect} rounded-3xl overflow-hidden shadow-md hover-lift transition-smooth animate-fade-in-up bg-gray-900`}
+                      style={{animationDelay: `${i * 0.05}s`}}
+                    >
+                      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
+                        <svg className="w-12 h-12 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M2 6a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
+                        </svg>
+                      </div>
                     </div>
                   ))}
                 </div>
