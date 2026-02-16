@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useSearchParams, useRouter } from "next/navigation";
 import { ArrowRight, Star, AlertCircle, CheckCircle } from "lucide-react";
 import GoogleButton from "@/components/GoogleButton";
+import { useAuthStore } from "@/stores/auth";
 
 function AuthContent() {
   const params = useSearchParams();
@@ -61,6 +62,10 @@ function AuthContent() {
         setError(data.error || "Signup failed");
         return;
       }
+
+      // Persist user to auth store
+      const { login } = useAuthStore.getState();
+      login(data.user, data.token);
 
       // Redirect to onboarding based on role
       const onboardingPath = role === "creator" ? "/onboarding/creator" : "/onboarding/brand";

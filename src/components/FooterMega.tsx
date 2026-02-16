@@ -46,11 +46,11 @@ export default function FooterMega() {
           <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             <h4 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Legal & Policies</h4>
             <ul className="space-y-3 text-sm text-gray-300">
-              <li><span className="cursor-default hover:text-white transition-smooth">Trust Center</span></li>
-              <li><span className="cursor-default hover:text-white transition-smooth">Terms of Service</span></li>
-              <li><span className="cursor-default hover:text-white transition-smooth">Privacy Policies</span></li>
-              <li><span className="cursor-default hover:text-white transition-smooth">Cookie Notice</span></li>
-              <li><span className="cursor-default hover:text-white transition-smooth">Creator Terms of Service</span></li>
+              <li><Link href="/privacy" className="hover:text-white transition-smooth hover:translate-x-1 inline-block">Trust Center</Link></li>
+              <li><Link href="/privacy" className="hover:text-white transition-smooth hover:translate-x-1 inline-block">Terms of Service</Link></li>
+              <li><Link href="/privacy" className="hover:text-white transition-smooth hover:translate-x-1 inline-block">Privacy Policies</Link></li>
+              <li><Link href="/privacy" className="hover:text-white transition-smooth hover:translate-x-1 inline-block">Cookie Notice</Link></li>
+              <li><Link href="/privacy" className="hover:text-white transition-smooth hover:translate-x-1 inline-block">Creator Terms of Service</Link></li>
             </ul>
           </div>
           <div className="animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
