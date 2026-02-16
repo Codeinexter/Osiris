@@ -20,11 +20,11 @@ function CallbackContent() {
                 // Update local state - pass both user and token
                 login(user, token);
 
-                // Redirect based on role
+                // Redirect based on role and onboarded status
                 if (user.role === "brand") {
-                    router.push("/onboarding/brand");
+                    router.push(user.onboarded ? "/app/brand" : "/onboarding/brand");
                 } else {
-                    router.push("/app/creator");
+                    router.push(user.onboarded ? "/app/creator" : "/onboarding/creator");
                 }
             } catch (e) {
                 console.error("Failed to parse user data", e);

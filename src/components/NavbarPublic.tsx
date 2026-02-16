@@ -13,8 +13,8 @@ export default function NavbarPublic() {
             Osiris
           </Link>
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/brands" className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-smooth flex items-center gap-1 group">
-              Brands <ChevronDown className="w-3 h-3 transition-smooth group-hover:rotate-180" />
+            <Link href="/brands" className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-smooth">
+              Brands
             </Link>
             <Link href="/creators" className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-smooth">
               Creators
