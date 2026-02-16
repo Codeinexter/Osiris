@@ -40,7 +40,7 @@ export default function BrandCampaigns() {
               <div><label className="block text-sm font-medium mb-1">Goals</label><input placeholder="Brand awareness, sales..." className="w-full px-4 py-3 border border-gray-200 rounded-xl" /></div>
               <div><label className="block text-sm font-medium mb-1">Deliverables</label><input placeholder="e.g. Instagram Reels + Stories" className="w-full px-4 py-3 border border-gray-200 rounded-xl" /></div>
               <div className="grid grid-cols-2 gap-4">
-                <div><label className="block text-sm font-medium mb-1">Budget</label><input placeholder="$10,000" className="w-full px-4 py-3 border border-gray-200 rounded-xl" /></div>
+                <div><label className="block text-sm font-medium mb-1">Budget</label><input placeholder="₹10,000" className="w-full px-4 py-3 border border-gray-200 rounded-xl" /></div>
                 <div><label className="block text-sm font-medium mb-1">Timeline</label><input placeholder="Jan - Mar 2026" className="w-full px-4 py-3 border border-gray-200 rounded-xl" /></div>
               </div>
               <div className="flex gap-3 pt-2">

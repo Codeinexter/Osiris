@@ -1,5 +1,9 @@
 {
   "/page": "app/page.js",
-  "/creators/page": "app/creators/page.js",
-  "/brands/page": "app/brands/page.js"
+  "/onboarding/brand/page": "app/onboarding/brand/page.js",
+  "/auth/page": "app/auth/page.js",
+  "/api/auth/signup/route": "app/api/auth/signup/route.js",
+  "/api/auth/google/route": "app/api/auth/google/route.js",
+  "/onboarding/creator/page": "app/onboarding/creator/page.js",
+  "/(protected)/app/brand/page": "app/(protected)/app/brand/page.js"
 }

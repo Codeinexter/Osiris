@@ -7,9 +7,9 @@ import Link from "next/link";
 import { categories } from "@/data/seed";
 
 const STEPS = ["Company Info", "Details", "Goals", "Budget", "Finish"];
-const BIZ_TYPES = ["E-commerce","SaaS","DTC Brand","Agency","Retail","Media","Non-profit","Other"];
-const GOALS = ["Brand Awareness","Sales / Conversions","UGC Content","Affiliate Program","Product Launch","Event Promotion"];
-const COUNTRIES = ["United States","United Kingdom","Canada","India","Australia","Germany","Brazil","France","Japan","Mexico"];
+const BIZ_TYPES = ["E-commerce", "SaaS", "DTC Brand", "Agency", "Retail", "Media", "Non-profit", "Other"];
+const GOALS = ["Brand Awareness", "Sales / Conversions", "UGC Content", "Affiliate Program", "Product Launch", "Event Promotion"];
+const COUNTRIES = ["United States", "United Kingdom", "Canada", "India", "Australia", "Germany", "Brazil", "France", "Japan", "Mexico"];
 
 export default function BrandOnboarding() {
   const [step, setStep] = useState(0);
@@ -116,7 +116,7 @@ export default function BrandOnboarding() {
                 </div>
               </div>
               <div><label className="block text-sm font-medium mb-3">Or select a budget range <span className="text-red-500">*</span></label>
-                <div className="grid grid-cols-2 gap-3">{["Under $5K","$5K - $15K","$15K - $50K","$50K - $100K","$100K+","Not sure yet"].map((b) => (
+                <div className="grid grid-cols-2 gap-3">{["Under ₹5K", "₹5K - ₹15K", "₹15K - ₹50K", "₹50K - ₹100K", "₹100K+", "Not sure yet"].map((b) => (
                   <button key={b} onClick={() => update("budget", b)} className={`p-4 rounded-xl text-sm font-medium text-left transition-colors border ${data.budget === b ? "border-brand bg-brand/5 text-brand" : "border-gray-200 hover:border-gray-300"}`}>{b}</button>
                 ))}</div>
               </div>

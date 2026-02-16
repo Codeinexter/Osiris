@@ -59,7 +59,7 @@ export default function BrandDashboard() {
             <div className="space-y-4">
               <div><label className="block text-sm font-medium mb-1">Campaign name</label><input value={campaignName} onChange={(e) => setCampaignName(e.target.value)} placeholder="e.g. Summer Product Launch" className="w-full px-4 py-3 border border-gray-200 rounded-xl" /></div>
               <div><label className="block text-sm font-medium mb-1">Goals</label><input placeholder="Brand awareness, sales..." className="w-full px-4 py-3 border border-gray-200 rounded-xl" /></div>
-              <div><label className="block text-sm font-medium mb-1">Budget</label><input placeholder="$10,000" className="w-full px-4 py-3 border border-gray-200 rounded-xl" /></div>
+              <div><label className="block text-sm font-medium mb-1">Budget</label><input placeholder="₹10,000" className="w-full px-4 py-3 border border-gray-200 rounded-xl" /></div>
               <div className="flex gap-3 pt-2">
                 <button onClick={() => setShowModal(false)} className="flex-1 py-3 border border-gray-200 rounded-xl font-medium text-sm hover:bg-gray-50">Cancel</button>
                 <button onClick={createCampaign} className="flex-1 py-3 bg-brand text-white rounded-xl font-medium text-sm hover:bg-brand-dark">Create</button>

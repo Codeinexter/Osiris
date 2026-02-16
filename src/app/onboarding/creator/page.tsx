@@ -7,7 +7,7 @@ import Link from "next/link";
 import { categories } from "@/data/seed";
 
 const STEPS = ["Basics", "Platforms", "Niche", "Rates", "Finish"];
-const COUNTRIES = ["United States","United Kingdom","Canada","India","Australia","Germany","Brazil","France","Japan","Mexico","South Korea","Spain","Italy","UAE"];
+const COUNTRIES = ["United States", "United Kingdom", "Canada", "India", "Australia", "Germany", "Brazil", "France", "Japan", "Mexico", "South Korea", "Spain", "Italy", "UAE"];
 
 export default function CreatorOnboarding() {
   const [step, setStep] = useState(0);
@@ -101,7 +101,7 @@ export default function CreatorOnboarding() {
               </div>
               {["Instagram Reel", "X (Twitter)", "Instagram Story", "YouTube Integration"].map((type) => (
                 <div key={type}><label className="block text-sm font-medium mb-1">{type}</label>
-                  <div className="relative"><span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">$</span>
+                  <div className="relative"><span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">₹</span>
                     <input type="number" value={data[type] || ""} onChange={(e) => update(type, e.target.value)} placeholder="0" className="w-full pl-8 pr-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand/20" />
                   </div>
                 </div>

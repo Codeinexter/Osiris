@@ -13,71 +13,61 @@ export default function LandingPage() {
   // Mock data for creators with their categories
   const creators = [
     // Fitness
-    { category: "Fitness", url: "https://www.instagram.com/reel/CoFdmkzJ6Cj/" },
-    { category: "Fitness", url: "https://www.instagram.com/reel/DUzBxl_kwh1/" },
-    { category: "Fitness", url: "https://www.instagram.com/reel/DT-g6dRiJjn/" },
-    { category: "Fitness", url: "https://www.instagram.com/reel/DU0EFt1iR1C/" },
-    { category: "Fitness", url: "https://www.instagram.com/p/BGxnBBAkhxQ/" },
-    { category: "Fitness", url: "https://www.instagram.com/reel/Ci6p9KbJ2Xj/" },
-    { category: "Fitness", url: "https://www.instagram.com/reel/DKUu1pEvTaK/" },
-    { category: "Fitness", url: "https://www.instagram.com/reel/DO96Gy7gSdm/" },
-    { category: "Fitness", url: "https://www.instagram.com/reel/C6L1EMOyxM8/" },
-    { category: "Fitness", url: "https://www.instagram.com/reel/CNH-VX4AQ90/" },
-    { category: "Fitness", url: "https://www.instagram.com/reel/DSxGbtMkjoV/" },
+    { category: "Fitness", url: "/videos/fitness_1.mp4" },
+    { category: "Fitness", url: "/videos/fitness_2.mp4" },
+    { category: "Fitness", url: "/videos/fitness_3.mp4" },
+    { category: "Fitness", url: "/videos/fitness_4.mp4" },
+    { category: "Fitness", url: "/videos/fitness_5.mp4" },
+    { category: "Fitness", url: "/videos/fitness_6.mp4" },
+    { category: "Fitness", url: "/videos/fitness_7.mp4" },
+    { category: "Fitness", url: "/videos/fitness_8.mp4" },
+    { category: "Fitness", url: "/videos/fitness_9.mp4" },
+    { category: "Fitness", url: "/videos/fitness_10.mp4" },
+    { category: "Fitness", url: "/videos/fitness_11.mp4" },
     // Fashion
-    { category: "Fashion", url: "https://www.instagram.com/reel/Cz8rxeLM9za/" },
-    { category: "Fashion", url: "https://www.instagram.com/reel/DLX8dVyzFyM/" },
-    { category: "Fashion", url: "https://www.instagram.com/reel/DP8zcqAkk9q/" },
-    { category: "Fashion", url: "https://www.instagram.com/reel/DUiL3WiAQOa/" },
-    { category: "Fashion", url: "https://www.instagram.com/reel/DRSmpmnDoAV/" },
-    { category: "Fashion", url: "https://www.instagram.com/reel/DRMQIOhkUBa/" },
-    { category: "Fashion", url: "https://www.instagram.com/reel/Cz8rxeLM9za/" }, // Duplicate to fill grid
-    { category: "Fashion", url: "https://www.instagram.com/reel/DLX8dVyzFyM/" }, // Duplicate to fill grid
+    { category: "Fashion", url: "/videos/fashion_1.mp4" },
+    { category: "Fashion", url: "/videos/fashion_2.mp4" },
+    { category: "Fashion", url: "/videos/fashion_3.mp4" },
+    { category: "Fashion", url: "/videos/fashion_4.mp4" },
+    { category: "Fashion", url: "/videos/fashion_5.mp4" },
+    { category: "Fashion", url: "/videos/fashion_6.mp4" },
     // Tech
-    { category: "Tech", url: "https://www.instagram.com/reel/DRAIEoxE9sN/" },
-    { category: "Tech", url: "https://www.instagram.com/reel/DBlj_VFx0u0/" },
-    { category: "Tech", url: "https://www.instagram.com/reel/DOaHK7bERIg/" },
-    { category: "Tech", url: "https://www.instagram.com/reel/DQ0eGoUEoOW/" },
-    { category: "Tech", url: "https://www.instagram.com/reel/DJ6mms4yKwO/" },
-    { category: "Tech", url: "https://www.instagram.com/reel/DTNYwK8kekK/" },
-    { category: "Tech", url: "https://www.instagram.com/reel/DRAIEoxE9sN/" }, // Duplicate
-    { category: "Tech", url: "https://www.instagram.com/reel/DBlj_VFx0u0/" }, // Duplicate
+    { category: "Tech", url: "/videos/tech_1.mp4" },
+    { category: "Tech", url: "/videos/tech_2.mp4" },
+    { category: "Tech", url: "/videos/tech_3.mp4" },
+    { category: "Tech", url: "/videos/tech_4.mp4" },
+    { category: "Tech", url: "/videos/tech_5.mp4" },
+    { category: "Tech", url: "/videos/tech_6.mp4" },
     // Food
-    { category: "Food", url: "https://www.instagram.com/reel/ClRQFkRIK0m/" },
-    { category: "Food", url: "https://www.instagram.com/reel/DSX5PatCCtG/" },
-    { category: "Food", url: "https://www.instagram.com/reel/DRTv9oYgX7a/" },
-    { category: "Food", url: "https://www.instagram.com/reel/DUZ3suHjDvQ/" },
-    { category: "Food", url: "https://www.instagram.com/reel/DUSSQ_JiRF9/" },
-    { category: "Food", url: "https://www.instagram.com/reel/DPAKRa8jabI/" },
-    { category: "Food", url: "https://www.instagram.com/reel/ClRQFkRIK0m/" }, // Duplicate
-    { category: "Food", url: "https://www.instagram.com/reel/DSX5PatCCtG/" }, // Duplicate
+    { category: "Food", url: "/videos/food_1.mp4" },
+    { category: "Food", url: "/videos/food_2.mp4" },
+    { category: "Food", url: "/videos/food_3.mp4" },
+    { category: "Food", url: "/videos/food_4.mp4" },
+    { category: "Food", url: "/videos/food_5.mp4" },
+    { category: "Food", url: "/videos/food_6.mp4" },
     // Travel
-    { category: "Travel", url: "https://www.instagram.com/reel/DO6LSHPjJkT/" },
-    { category: "Travel", url: "https://www.instagram.com/reel/DHdxalPN-Jg/" },
-    { category: "Travel", url: "https://www.instagram.com/reel/DM2WE0oMFv-/" },
-    { category: "Travel", url: "https://www.instagram.com/reel/DMegxAaRT1K/" },
-    { category: "Travel", url: "https://www.instagram.com/reel/DTUBZJdglPF/" },
-    { category: "Travel", url: "https://www.instagram.com/reel/C_vJcN3S-_l/" },
-    { category: "Travel", url: "https://www.instagram.com/reel/DO6LSHPjJkT/" }, // Duplicate
-    { category: "Travel", url: "https://www.instagram.com/reel/DHdxalPN-Jg/" }, // Duplicate
+    { category: "Travel", url: "/videos/travel_1.mp4" },
+    { category: "Travel", url: "/videos/travel_2.mp4" },
+    { category: "Travel", url: "/videos/travel_3.mp4" },
+    { category: "Travel", url: "/videos/travel_4.mp4" },
+    { category: "Travel", url: "/videos/travel_5.mp4" },
+    { category: "Travel", url: "/videos/travel_6.mp4" },
     // Gaming
-    { category: "Gaming", url: "https://www.instagram.com/reel/DDlFYmxtS19/" },
-    { category: "Gaming", url: "https://www.instagram.com/reel/DKzvAsUhe3X/" },
-    { category: "Gaming", url: "https://www.instagram.com/reel/C_ksBqdoqOS/" },
-    { category: "Gaming", url: "https://www.instagram.com/reel/DA2UAkbNXks/" },
-    { category: "Gaming", url: "https://www.instagram.com/reel/DSH4KyTCPtj/" },
-    { category: "Gaming", url: "https://www.instagram.com/reel/DLR_F_xxrY1/" },
-    { category: "Gaming", url: "https://www.instagram.com/reel/DDlFYmxtS19/" }, // Duplicate
-    { category: "Gaming", url: "https://www.instagram.com/reel/DKzvAsUhe3X/" }, // Duplicate
+    { category: "Gaming", url: "/videos/gaming_1.mp4" },
+    { category: "Gaming", url: "/videos/gaming_2.mp4" },
+    { category: "Gaming", url: "/videos/gaming_3.mp4" },
+    { category: "Gaming", url: "/videos/gaming_4.mp4" },
+    { category: "Gaming", url: "/videos/gaming_5.mp4" },
+    { category: "Gaming", url: "/videos/gaming_6.mp4" },
     // Beauty
-    { category: "Beauty", url: "https://www.instagram.com/reel/DQDl52ekvG5/" },
-    { category: "Beauty", url: "https://www.instagram.com/reel/DLXup_JpUXd/" },
-    { category: "Beauty", url: "https://www.instagram.com/reel/DPWTD0AiZ5U/" },
-    { category: "Beauty", url: "https://www.instagram.com/reel/DNTQJpxis5U/" },
-    { category: "Beauty", url: "https://www.instagram.com/reel/DOBAJ42EkV4/" },
-    { category: "Beauty", url: "https://www.instagram.com/reel/DOREwHUjHRU/" },
-    { category: "Beauty", url: "https://www.instagram.com/reel/DPL6k9_AcGq/" },
-    { category: "Beauty", url: "https://www.instagram.com/reel/DQDl52ekvG5/" }, // Duplicate
+    { category: "Beauty", url: "/videos/beauty_1.mp4" },
+    { category: "Beauty", url: "/videos/beauty_2.mp4" },
+    { category: "Beauty", url: "/videos/beauty_3.mp4" },
+    { category: "Beauty", url: "/videos/beauty_4.mp4" },
+    { category: "Beauty", url: "/videos/beauty_5.mp4" },
+    { category: "Beauty", url: "/videos/beauty_6.mp4" },
+    { category: "Beauty", url: "/videos/beauty_7.mp4" },
+
   ];
 
   const filteredCreators = selectedCategory === "All Categories"
@@ -109,23 +99,24 @@ export default function LandingPage() {
                 <div className="grid grid-cols-3 grid-rows-2 gap-3 h-full min-h-[300px]">
                   {[
                     // Hero Collage Reels - Mix from various categories
-                    { url: "https://www.instagram.com/reel/CoFdmkzJ6Cj/", aspect: "col-span-2 row-span-2" }, // Fitness
-                    { url: "https://www.instagram.com/reel/Cz8rxeLM9za/", aspect: "col-span-1 row-span-1" }, // Fashion
-                    { url: "https://www.instagram.com/reel/DRAIEoxE9sN/", aspect: "col-span-1 row-span-1" }, // Tech
-                    { url: "https://www.instagram.com/reel/ClRQFkRIK0m/", aspect: "col-span-1 row-span-1" }, // Food
-                    { url: "https://www.instagram.com/reel/DO6LSHPjJkT/", aspect: "col-span-1 row-span-1" }, // Travel
+                    { url: "/videos/fitness_1.mp4", aspect: "col-span-2 row-span-2" }, // Fitness
+                    { url: "/videos/fashion_1.mp4", aspect: "col-span-1 row-span-1" }, // Fashion
+                    { url: "/videos/tech_1.mp4", aspect: "col-span-1 row-span-1" }, // Tech
+                    { url: "/videos/food_1.mp4", aspect: "col-span-1 row-span-1" }, // Food
+                    { url: "/videos/travel_1.mp4", aspect: "col-span-1 row-span-1" }, // Travel
                   ].map((tile, i) => (
                     <div
                       key={i}
                       className={`${tile.aspect} rounded-3xl overflow-hidden shadow-md hover-lift transition-smooth animate-fade-in-up bg-gray-900 relative group`}
                       style={{ animationDelay: `${i * 0.05}s` }}
                     >
-                      <iframe
-                        src={`${tile.url}embed`}
-                        className="w-full h-full absolute inset-0 border-0"
-                        allowFullScreen
-                        loading="lazy"
-                        scrolling="no"
+                      <video
+                        src={tile.url}
+                        className="w-full h-full object-cover"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
                       />
                       {/* Interaction overlay to prevent iframe stealing clicks but allow scrolling if needed, or just let users click play */}
                       {/* For now keeping plain iframe */}
@@ -232,12 +223,13 @@ export default function LandingPage() {
                   className="aspect-[9/16] rounded-[2rem] overflow-hidden shadow-md hover-lift hover:shadow-lg transition-smooth animate-fade-in-up bg-gray-100 relative group"
                   style={{ animationDelay: `${i * 0.05}s` }}
                 >
-                  <iframe
-                    src={`${creator.url}embed`}
-                    className="w-full h-full absolute inset-0 border-0"
-                    allowFullScreen
-                    loading="lazy"
-                    scrolling="no"
+                  <video
+                    src={creator.url}
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
                   />
                   <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                     <span className="text-xs font-bold bg-white/95 backdrop-blur px-3 py-1 rounded-full text-gray-900 shadow-sm">
