@@ -70,6 +70,20 @@ export default function CreatorPublicProfile({ params }: { params: { handle: str
                 ))}</div>
               </div>
             )}
+
+            {(creator as any).portfolioPhotos && (creator as any).portfolioPhotos.length > 0 && (
+              <div className="mt-8">
+                <h2 className="font-bold text-lg mb-3">Portfolio Photos</h2>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                  {(creator as any).portfolioPhotos.map((photo: string, i: number) => (
+                    <div key={i} className="aspect-square rounded-xl overflow-hidden bg-gray-100 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={photo} alt={`Portfolio ${i + 1}`} className="w-full h-full object-cover rounded-xl" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </main>

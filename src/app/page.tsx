@@ -113,7 +113,7 @@ export default function LandingPage() {
                     // Hero Collage Reels - Mix from various categories
                     { url: "/videos/fitness_1.mp4", aspect: "col-span-2 row-span-2" }, // Fitness
                     { url: "/videos/fashion_1.mp4", aspect: "col-span-1 row-span-1" }, // Fashion
-                    { url: "/videos/tech_1.mp4", aspect: "col-span-1 row-span-1" }, // Tech
+                    { url: "/videos/tech_3.mp4", aspect: "col-span-1 row-span-1" }, // Tech
                     // { url: "/videos/food_1.mp4", aspect: "col-span-1 row-span-1" }, // Food
                     // { url: "/videos/travel_1.mp4", aspect: "col-span-1 row-span-1" }, // Travel
                   ].map((tile, i) => (
@@ -141,7 +141,7 @@ export default function LandingPage() {
         </section>
 
         {/* Trust bar */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        {/* <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
           <div className="flex flex-wrap items-center justify-center gap-8 text-gray-400 text-sm font-medium">
             <span>Trusted by 2,500+ brands</span>
             <span>•</span>
@@ -152,21 +152,24 @@ export default function LandingPage() {
               <span className="ml-1 text-gray-600 font-semibold">4.9/5</span>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Feature sections */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
           <div className="text-center mb-16">
-            <p className="text-sm font-bold uppercase tracking-widest text-brand mb-3">Why Osiris</p>
-            <h2 className="font-display text-3xl sm:text-5xl font-bold">Build your dream roster.</h2>
-            <p className="mt-4 text-gray-500 text-lg max-w-2xl mx-auto">Identify your next brand champion with Osiris&apos;s Creator Discovery Suite. Surface top-fit creators, match prospects to campaign goals, and automate outreach.</p>
+            <p className="text-sm font-bold uppercase tracking-widest text-brand mb-3">data driven influencing</p>
+            <h2 className="font-display text-3xl sm:text-5xl font-bold">Why Osiris ?</h2>
+            {/* <p className="mt-4 text-gray-500 text-lg max-w-2xl mx-auto">Identify your next brand champion with Osiris&apos;s Creator Discovery Suite. Surface top-fit creators, match prospects to campaign goals, and automate outreach.</p> */}
+            <p className="mt-4 text-gray-500 text-lg max-w-2xl mx-auto">Find, evaluate, and connect with the best creators using Osiris&apos;s intelligent discovery platform—built to align with your campaign needs.</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { icon: Zap, title: "No Upfront Cost", desc: "Search creators for free. No subscriptions, contracts, or hidden fees." },
               { icon: Shield, title: "Vetted Creators", desc: "Every creator is vetted by us. Always receive high-quality, professional content." },
               { icon: MessageCircle, title: "Instant Chat", desc: "Instantly chat with creators and stay in touch throughout the whole collaboration." },
               { icon: Users, title: "Secure Payments", desc: "Your money is held safely until you approve the creator's work." },
+              { icon: Users, title: "influencer fit", desc: "find influencers that actually bring conversions" },
+              { icon: BarChart3, title: "reports and analytics", desc: "Complete data driven insights for your creator management" },
             ].map((f, i) => (
               <div key={i} className="border border-gray-200 rounded-3xl p-6 bg-white hover-lift hover:shadow-card-hover hover:border-brand/30 transition-smooth animate-fade-in-up" style={{ animationDelay: `${i * 0.1}s` }}>
                 <div className="w-10 h-10 rounded-xl bg-brand/15 flex items-center justify-center mb-4 transition-smooth group-hover:scale-110">
@@ -205,7 +208,7 @@ export default function LandingPage() {
             <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight">
               &ldquo;Osiris brings something unique to the market. We saw the brand <span className="text-brand">grow more than 55%.</span>&rdquo;
             </h2>
-            <p className="mt-6 text-gray-500">Charlene Zapisocki, Brand Manager — Norwell</p>
+            <p className="mt-6 text-gray-500">Musharraf Abdullah</p>
           </div>
         </section>
 
@@ -263,21 +266,24 @@ export default function LandingPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gray-700 rounded-3xl aspect-video col-span-2 flex items-center justify-center text-gray-500 shadow-card">
-                  <span className="text-sm">Event photo</span>
+                <div className="bg-gray-700 rounded-3xl aspect-video col-span-2 flex items-center justify-center text-gray-500 shadow-card overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="photos/Event_Photo.jpg" alt="Event photo" className="w-full h-full object-cover" />
                 </div>
-                <div className="bg-gray-700 rounded-full aspect-square flex items-center justify-center text-gray-500 shadow-card">
-                  <span className="text-xs">Creator</span>
+                <div className="bg-gray-700 rounded-full aspect-square flex items-center justify-center text-gray-500 shadow-card overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="photos/creator.jpg" alt="Creator" className="w-full h-full object-cover" />
                 </div>
-                <div className="bg-gray-700 rounded-3xl aspect-square flex items-center justify-center text-gray-500 shadow-card">
-                  <span className="text-xs">Event</span>
+                <div className="bg-gray-700 rounded-3xl aspect-square flex items-center justify-center text-gray-500 shadow-card overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="photos/Event.jpg" alt="Event" className="w-full h-full object-cover" />
                 </div>
               </div>
               <div>
                 <h2 className="font-display text-4xl sm:text-5xl font-bold leading-tight">We bring marketers and creators together IRL, too.</h2>
                 <p className="mt-4 text-gray-300 text-lg">Join us and spend an evening with the most-loved content creators in your city.</p>
                 <div className="flex gap-2 mt-6 flex-wrap">
-                  {["Los Angeles", "Chicago", "Toronto", "New York", "Miami"].map((city) => (
+                  {["Mumbai", "Delhi", "Hyderabad", "Bangalore", "Ahmedabad"].map((city) => (
                     <span key={city} className="bg-accent text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full shadow-md">{city}</span>
                   ))}
                 </div>

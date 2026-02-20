@@ -162,7 +162,19 @@ function AuthContent() {
         </div>
         <div className="hidden lg:block bg-gradient-to-br from-brand via-neon-purple to-accent relative overflow-hidden animate-fade-in-right">
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-80 h-96 bg-gradient-to-br from-neon-pink to-neon-purple rounded-[3rem] transform rotate-3 shadow-lg animate-float"></div>
+            <div className="w-80 h-96 rounded-[3rem] transform rotate-3 shadow-lg animate-float relative overflow-hidden bg-gradient-to-br from-neon-pink to-neon-purple p-1">
+              <div className="w-full h-full rounded-[2.8rem] overflow-hidden relative">
+                <video
+                  className="absolute inset-0 w-full h-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                >
+                  <source src="/videos/tech_1.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -300,7 +312,19 @@ function AuthContent() {
 
       <div className="hidden lg:block bg-gradient-to-br from-brand via-neon-purple to-accent relative overflow-hidden animate-fade-in-right">
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-80 h-96 bg-gradient-to-br from-neon-pink to-neon-purple rounded-[3rem] transform rotate-3 shadow-lg animate-float"></div>
+          <div className="w-80 h-96 rounded-[3rem] transform rotate-3 shadow-lg animate-float relative overflow-hidden bg-gradient-to-br from-neon-pink to-neon-purple p-1">
+            <div className="w-full h-full rounded-[2.8rem] overflow-hidden relative">
+              <video
+                className="absolute inset-0 w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+              >
+                <source src="/videos/fitness_1.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
         </div>
       </div>
     </div>

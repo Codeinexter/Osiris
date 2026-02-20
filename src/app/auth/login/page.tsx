@@ -70,9 +70,21 @@ function LoginForm() {
         <p className="text-sm text-gray-500 mt-6">Don&apos;t have an account yet? <Link href={`/auth/signup?role=${role}`} className="underline font-medium text-black">Sign up here</Link></p>
         <p className="text-sm text-gray-500 mt-2">Demo credentials: <code className="bg-gray-100 px-2 py-0.5 rounded text-xs">creator@test.com</code> / <code className="bg-gray-100 px-2 py-0.5 rounded text-xs">brand@test.com</code> — password: <code className="bg-gray-100 px-2 py-0.5 rounded text-xs">password123</code></p>
       </div>
-      <div className="hidden lg:block bg-gradient-to-br from-amber-100 to-green-100 relative overflow-hidden">
+      <div className="hidden lg:block bg-gradient-to-br from-brand via-neon-purple to-accent relative overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-96 h-[500px] bg-emerald-200 rounded-[3rem] transform -rotate-3"></div>
+          <div className="w-80 h-96 rounded-[3rem] transform rotate-3 shadow-lg animate-float relative overflow-hidden bg-gradient-to-br from-neon-pink to-neon-purple p-1">
+            <div className="w-full h-full rounded-[2.8rem] overflow-hidden relative">
+              <video
+                className="absolute inset-0 w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+              >
+                <source src="/videos/tech_1.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
         </div>
       </div>
       {toast && <Toast message={toast} onClose={() => setToast("")} />}
