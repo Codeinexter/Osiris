@@ -62,6 +62,7 @@ export default function CreatorOnboarding() {
               <div><label className="block text-sm font-medium mb-1">Instagram</label><input value={data.instagram || ""} onChange={(e) => update("instagram", e.target.value)} placeholder="@handle" className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand/20" /></div>
               <div><label className="block text-sm font-medium mb-1">X (Twitter)</label><input value={data.x || ""} onChange={(e) => update("x", e.target.value)} placeholder="@handle" className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand/20" /></div>
               <div><label className="block text-sm font-medium mb-1">YouTube</label><input value={data.youtube || ""} onChange={(e) => update("youtube", e.target.value)} placeholder="Channel name" className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand/20" /></div>
+              <div><label className="block text-sm font-medium mb-1">Portfolio Photos</label><input value={data.portfolioPhotos || ""} onChange={(e) => update("portfolioPhotos", e.target.value)} placeholder="Comma-separated photo URLs" className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand/20" /></div>
             </div>
           )}
           {step === 2 && (

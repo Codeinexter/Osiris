@@ -13,7 +13,7 @@ export default function FooterMega() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           <div className="lg:col-span-1 animate-fade-in-up">
             <h3 className="font-display text-2xl font-bold mb-4">Osiris</h3>
-            <Link href="/auth" className="inline-flex items-center gap-2 bg-brand rounded-xl px-5 py-3 text-sm font-medium hover:bg-brand-light transition-smooth shadow-md hover:shadow-lg hover-lift">
+            <Link href="/how-it-works" className="inline-flex items-center gap-2 bg-brand rounded-xl px-5 py-3 text-sm font-medium hover:bg-brand-light transition-smooth shadow-md hover:shadow-lg hover-lift">
               See how it works <span className="text-lg transition-smooth group-hover:translate-x-1">↗</span>
             </Link>
             <p className="text-gray-500 text-xs mt-6">© Osiris Inc. 2026. All rights reserved.</p>
@@ -46,11 +46,10 @@ export default function FooterMega() {
           <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             <h4 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Legal & Policies</h4>
             <ul className="space-y-3 text-sm text-gray-300">
-              <li><Link href="/privacy" className="hover:text-white transition-smooth hover:translate-x-1 inline-block">Trust Center</Link></li>
-              <li><Link href="/privacy" className="hover:text-white transition-smooth hover:translate-x-1 inline-block">Terms of Service</Link></li>
-              <li><Link href="/privacy" className="hover:text-white transition-smooth hover:translate-x-1 inline-block">Privacy Policies</Link></li>
-              <li><Link href="/privacy" className="hover:text-white transition-smooth hover:translate-x-1 inline-block">Cookie Notice</Link></li>
-              <li><Link href="/privacy" className="hover:text-white transition-smooth hover:translate-x-1 inline-block">Creator Terms of Service</Link></li>
+              <li><Link href="/terms-of-service" className="hover:text-white transition-smooth inline-block">Terms of Service</Link></li>
+              <li><span className="cursor-default hover:text-white transition-smooth inline-block">Privacy Policies</span></li>
+              <li><Link href="/cookie-notice" className="hover:text-white transition-smooth inline-block">Cookie Notice</Link></li>
+              <li><Link href="/creator-terms-of-service" className="hover:text-white transition-smooth inline-block">Creator Terms of Service</Link></li>
             </ul>
           </div>
           <div className="animate-fade-in-up" style={{ animationDelay: "0.4s" }}>

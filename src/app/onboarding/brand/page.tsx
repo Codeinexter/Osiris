@@ -74,6 +74,7 @@ export default function BrandOnboarding() {
               <h2 className="font-display text-2xl font-bold">Tell us about your brand</h2>
               <p className="text-gray-500 text-sm">This helps us match you with the right creators.</p>
               <div><label className="block text-sm font-medium mb-1">Brand description <span className="text-red-500">*</span></label><textarea value={data.description || ""} onChange={(e) => update("description", e.target.value)} placeholder="Describe your brand in a few sentences..." rows={4} className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand/20 resize-none" required /></div>
+              <div><label className="block text-sm font-medium mb-1">Hashtags</label><input value={data.hashtags || ""} onChange={(e) => update("hashtags", e.target.value)} placeholder="e.g. #fitness, #health (comma separated)" className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand/20" /></div>
               <div><label className="block text-sm font-medium mb-1">Primary niche <span className="text-red-500">*</span></label>
                 <select value={data.primaryNiche || ""} onChange={(e) => {
                   update("primaryNiche", e.target.value);

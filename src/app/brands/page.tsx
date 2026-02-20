@@ -14,24 +14,31 @@ export default function BrandsPage() {
             <div className="grid lg:grid-cols-2 gap-0">
               <div className="p-8 sm:p-12 lg:p-16 flex flex-col justify-center">
                 <span className="inline-flex text-xs font-bold bg-accent px-3 py-1 rounded-full w-fit mb-4 text-gray-900 animate-fade-in-down">Osiris for brands</span>
-                <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] animate-fade-in-down" style={{animationDelay: "0.1s"}}>Collaborate with top creators</h1>
-                <p className="mt-4 text-gray-700 text-lg max-w-md leading-relaxed animate-fade-in-down" style={{animationDelay: "0.2s"}}>Build your creator roster—faster. Shortlist creators with the right audience, launch campaigns, and measure ROI.</p>
+                <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] animate-fade-in-down" style={{ animationDelay: "0.1s" }}>Collaborate with top creators</h1>
+                <p className="mt-4 text-gray-700 text-lg max-w-md leading-relaxed animate-fade-in-down" style={{ animationDelay: "0.2s" }}>Build your creator roster—faster. Shortlist creators with the right audience, launch campaigns, and measure ROI.</p>
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <Link href="/auth?tab=signup&role=brand" className="inline-flex items-center gap-2 bg-black text-white font-semibold text-sm px-6 py-3.5 rounded-full hover-lift hover:bg-gray-800 transition-smooth shadow-md hover:shadow-lg animate-fade-in-down" style={{animationDelay: "0.3s"}}>Book a Demo</Link>
+                  <Link href="/auth?tab=signup&role=brand" className="inline-flex items-center gap-2 bg-black text-white font-semibold text-sm px-6 py-3.5 rounded-full hover-lift hover:bg-gray-800 transition-smooth shadow-md hover:shadow-lg animate-fade-in-down" style={{ animationDelay: "0.3s" }}>Book a Demo</Link>
                 </div>
                 <div className="flex items-center gap-2 mt-6">
                   <Link href="/creators" className="text-sm text-gray-700 underline hover:text-gray-900 transition-colors">Are you a creator? Join Osiris</Link>
                 </div>
                 <div className="flex items-center gap-2 mt-4">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-red-500 text-red-500 transition-smooth hover:scale-125" style={{animationDelay: `${i * 0.05}s`}} />)}
+                  {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-red-500 text-red-500 transition-smooth hover:scale-125" style={{ animationDelay: `${i * 0.05}s` }} />)}
                   <span className="text-xs font-bold text-red-600 uppercase tracking-wide">&ldquo;Best customer support&rdquo;</span>
                 </div>
               </div>
               <div className="p-6 lg:p-8">
-                <div className="grid grid-cols-3 grid-rows-2 gap-3 h-full min-h-[300px]">
-                  {["bg-neon-blue","bg-pink-400","bg-amber-400","bg-emerald-400","bg-neon-purple","bg-neon-cyan"].map((bg, i) => (
-                    <div key={i} className={`${bg} rounded-3xl ${i === 4 ? "col-span-2" : ""} shadow-md hover-lift transition-smooth animate-fade-in-up`} style={{animationDelay: `${i * 0.08}s`}}></div>
-                  ))}
+                <div className="grid grid-cols-2 gap-3 h-full min-h-[300px]">
+                  <div className="bg-pink-400 rounded-3xl row-span-2 relative shadow-md hover-lift transition-smooth animate-fade-in-up overflow-hidden">
+                    <video src="/videos/finance_1.mp4" className="w-full h-full object-cover absolute inset-0" autoPlay muted loop playsInline />
+                    <div className="absolute top-4 right-4 bg-white rounded-lg px-3 py-1.5 shadow-lg text-xs font-bold flex items-center gap-1 animate-fade-in-down z-10" style={{ animationDelay: "0.4s" }}><span className="text-green-500">✓</span> Approved</div>
+                  </div>
+                  <div className="bg-amber-400 rounded-3xl shadow-md hover-lift transition-smooth animate-fade-in-up overflow-hidden relative" style={{ animationDelay: "0.1s" }}>
+                    <video src="/videos/finance_2.mp4" className="w-full h-full object-cover absolute inset-0" autoPlay muted loop playsInline />
+                  </div>
+                  <div className="bg-neon-blue rounded-3xl shadow-md hover-lift transition-smooth animate-fade-in-up overflow-hidden relative" style={{ animationDelay: "0.2s" }}>
+                    <video src="/videos/beauty_1.mp4" className="w-full h-full object-cover absolute inset-0" autoPlay muted loop playsInline />
+                  </div>
                 </div>
               </div>
             </div>
@@ -84,10 +91,10 @@ export default function BrandsPage() {
             <p className="text-gray-500 text-lg text-center max-w-2xl mx-auto mb-12">Real-time analytics on every campaign. See engagement, reach, conversions, and ROI across all your creator partnerships.</p>
             <div className="grid md:grid-cols-3 gap-6">
               {[{ icon: Search, t: "Discover", d: "Find the perfect creators for your brand with AI-powered search and detailed audience insights." },
-                { icon: Zap, t: "Execute", d: "Manage briefs, contracts, approvals, and payments all in one workspace." },
-                { icon: BarChart3, t: "Measure", d: "Track real-time ROI with conversion attribution across every creator and campaign." }
+              { icon: Zap, t: "Execute", d: "Manage briefs, contracts, approvals, and payments all in one workspace." },
+              { icon: BarChart3, t: "Measure", d: "Track real-time ROI with conversion attribution across every creator and campaign." }
               ].map((f, i) => (
-                <div key={i} className="bg-surface rounded-3xl p-8 text-center border border-gray-200 shadow-card hover-lift hover:shadow-card-hover transition-smooth animate-fade-in-up" style={{animationDelay: `${i * 0.1}s`}}>
+                <div key={i} className="bg-surface rounded-3xl p-8 text-center border border-gray-200 shadow-card hover-lift hover:shadow-card-hover transition-smooth animate-fade-in-up" style={{ animationDelay: `${i * 0.1}s` }}>
                   <div className="w-12 h-12 rounded-xl bg-brand/15 mx-auto flex items-center justify-center mb-4 transition-smooth group-hover:scale-110"><f.icon className="w-6 h-6 text-brand" /></div>
                   <h3 className="font-bold text-xl mb-2">{f.t}</h3>
                   <p className="text-gray-600">{f.d}</p>
