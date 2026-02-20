@@ -20,7 +20,7 @@ export default function CreatorOnboarding() {
   const isStepValid = () => {
     switch (step) {
       case 0:
-        return data.name && data.phone && data.email;
+        return data.name && data.phone && (data.email || user?.email);
       case 1:
         return true;
       case 2:

@@ -1,7 +1,13 @@
 {
+<<<<<<< HEAD
   "/auth/page": "app/auth/page.js",
   "/brands/page": "app/brands/page.js",
   "/creators/page": "app/creators/page.js",
   "/page": "app/page.js",
   "/how-it-works/page": "app/how-it-works/page.js"
+=======
+  "/page": "app/page.js",
+  "/brands/page": "app/brands/page.js",
+  "/creators/page": "app/creators/page.js"
+>>>>>>> ce607061fc55fbfd1ac1b1f5c561f0dd29adfcf8
 }
